@@ -1,4 +1,4 @@
-// Soluttion 1
+// Solution 1
 function MatrixChallenge(strArr) {
   let matrix = strArr.map(row => JSON.parse(row));
   
@@ -44,7 +44,7 @@ function MatrixChallenge(strArr) {
 console.log({ 'solution 1': MatrixChallenge(["[1, 2]", "[10, 14]"]) }); // Output: 1,2,14,10
 console.log({ 'solution 1': MatrixChallenge(["[4, 5, 6, 5]", "[1, 1, 2, 2]", "[5, 4, 2, 9]"]) }); // Output: 4,5,6,5,2,9,2,4,5,1,1,2
 
-// Soluttion 2
+// Solution 2
 function MatrixChallenge2(strArr) {
   let result = [];
   let matrix = strArr.map(row => JSON.parse(row));
@@ -98,6 +98,5 @@ function MatrixChallenge2(strArr) {
   return result.join(",");
 }
 
-// Ejemplos de uso:
 console.log({ 'solution 2': MatrixChallenge2(["[1, 2]", "[10, 14]"]) }); // Output: 1,2,14,10
 console.log({ 'solution 2': MatrixChallenge2(["[4, 5, 6, 5]", "[1, 1, 2, 2]", "[5, 4, 2, 9]"]) }); // Output: 4,5,6,5,2,9,2,4,5,1,1,2

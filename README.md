@@ -124,6 +124,49 @@ Example Output:
 ];
 ```
 
+### Español
+
+En el archivo JavaScript, escriba un programa que simule el manejo de mensajes WebSocket complejos basados en diferentes tipos de mensajes y estructuras de carga útil.
+
+1. Define una función `advancedWebsocketHandler`, que toma un array de cadenas de mensajes. Cada cadena de mensaje es un objeto JSON que representa un mensaje WebSocket con diferentes estructuras basadas en el tipo:
+
+```javascript
+{
+ type: 'create' | 'modify' | 'query',
+ payload: {
+  ... // varies based on the type
+ },
+}
+```
+
+2. Su función debe procesar cada mensaje en función de su tipo:
+
+- Para los mensajes de creación, la carga útil tendrá `itemName` y `quantity`. Devuelve la cadena **"Created [quantity] de [itemName]"**.
+- Para los mensajes de modificación, la carga útil tendrá itemId, acción (añadir o restar) y cantidad. Devuelve la cadena **"Item [itemId] quantity [action]ed by [amount]"**.
+- Para los mensajes de consulta, la carga útil tendrá queryType y queryValue. Devuelve la cadena **"Query of type [queryType] with value [queryValue] processed"**.
+
+3. Devuelve un array de cadenas que representan los mensajes procesados. Por último, registra el array en la consola.
+
+Ejemplo de entrada:
+
+```javascript
+[
+  '{"type":"create","payload":{"itemName":"Widget","quantity":5}}',
+  '{"type":"modify","payload":{"itemId":3,"action":"add","amount":2}}',
+  '{"type":"query","payload":{"queryType":"status","queryValue":"pending"}}',
+];
+```
+
+Ejemplo de salida:
+
+```javascript
+[
+  "Created 5 of Widget",
+  "Item 3 quantity added by 2",
+  "Query of type status with value pending processed",
+];
+```
+
 # SQL Challenge
 
 ### English

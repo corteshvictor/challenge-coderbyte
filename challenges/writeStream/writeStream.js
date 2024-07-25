@@ -6,6 +6,7 @@ const CODER_BYTE_API_URL = 'https://coderbyte.com/api/challenges/json/age-counti
 const OUTPUT_FILE_PATH = `${__dirname}/output.txt`;
 const CHALLENGE_TOKEN = 'bsvkdyui385';
 
+// Solution 1
 https.get(CODER_BYTE_API_URL, (res) => {
   let data = '';
 
@@ -40,3 +41,5 @@ https.get(CODER_BYTE_API_URL, (res) => {
     console.log("🚀 ~ res.on ~ finalOutput:", finalOutput)
   });
 });
+
+// Solution 2 - Axios
